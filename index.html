@@ -131,3 +131,73 @@
         </div>
         </div>
 </section>
+/* Стилови за секцијата За нас */
+#about {
+    padding: 50px 20px; /* Иста padding како другите секции */
+    background-color: #fff; /* Бела позадина */
+    text-align: center;
+    max-width: 800px; /* Максимална ширина за текстот */
+    margin: 0 auto; /* Центрирај ја секцијата */
+}
+
+#about h2 {
+    margin-bottom: 30px;
+    color: #e57373; /* Вашата акцентна боја, ако е различна, сменете ја */
+}
+
+#about p {
+    line-height: 1.8; /* Растојание меѓу редовите за подобра читливост */
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Стилови за секцијата Галерија */
+#gallery {
+    padding: 50px 20px; /* Иста padding како другите секции */
+    background-color: #f9f9f9; /* Светла позадина */
+    text-align: center;
+}
+
+#gallery h2 {
+    margin-bottom: 40px;
+    color: #e57373; /* Вашата акцентна боја, ако е различна, сменете ја */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 колони за десктоп, респонзивно */
+    gap: 20px; /* Растојание помеѓу сликите */
+    max-width: 1200px; /* Максимална ширина на галеријата */
+    margin: 0 auto; /* Центрирај ја галеријата */
+}
+
+.gallery-item {
+    overflow: hidden; /* За да се осигури дека сликата не излегува од границите */
+    border-radius: 8px; /* Мали заоблени агли */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лесна сенка */
+    background-color: #fff;
+}
+
+.gallery-item img {
+    width: 100%; /* Сликата да ја зафаќа целата ширина на својот контејнер */
+    height: 300px; /* Фиксна висина, може да ја прилагодите */
+    object-fit: cover; /* Да се пополни просторот без да се деформира сликата */
+    display: block; /* Отстранува вишок простор под сликата */
+    transition: transform 0.3s ease; /* Ефект при ховер */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Лесно зумирање при ховер */
+}
+
+/* Медиа квири за мобилна приспособливост (доколку веќе немате) */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Помалку колони на помали екрани */
+    }
+}
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Една колона на многу мали екрани */
+    }
+}
